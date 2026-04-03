@@ -509,3 +509,42 @@ mtext(side = 4,text = "whats up there")
 
 mtext(side = 3,text = paste("paste","paste2"))
 mtext(side = 2,text = c("paste","paste2","paste2"))
+mtext(side = 1,text = paste0("paste","paste2"))
+
+# Calc the correlation btw 2 vectors
+r<-cor(x1,y1)
+#Display correlation coefficient on scatter plot
+mtext(side =3,text=paste("Correlation is ",round(r,2)))
+# Use col argument in plot to change colors
+plot(x1,y1,col="red")
+#using pch(plotting character)=19 as  an argument in plot
+#used to define shape or a symbol of a point in r
+
+plot(x1,y1,col="red",pch=12)
+
+#Make an histogram: Graphical representation of data distribution
+
+x1=c(2,3,4,4,4,4,rep(5,7),6,6,6,6,6,7,7,8)
+hist(x1)
+
+# use hist() arguments
+hist(x1, main = "Graphical data distribution",xlab = "Data",
+     col = "blue")
+# Make a boxplots
+boxplot(x1,y1)
+# use horizontal =TRUE argument
+boxplot(x1,y1,horizontal =TRUE)
+
+#make multiple plot(Normal run before plots are made)
+#2 rows 2 columns
+par(mfrow=c(2,2))
+#2 rows 1 column
+multplot<-par(mfrow=c(2,1))
+multplot
+hist(x1, main = "Graphical data distribution",xlab = "Data",
+     col = "blue")
+boxplot(x1,y1)
+getwd()
+C:/Users/oluwa/Downloads/
+  compGenomRData-master/compGenomRData-master/R
+/Reading of files in Comgenomdatapackage.R
